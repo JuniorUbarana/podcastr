@@ -1,7 +1,8 @@
 export default function Home(props) {
   return (
     <>
-      <h1>Index</h1>
+      <h1>Página Index</h1>
+      <p>&nbsp;</p>
       <p>{JSON.stringify(props.episodes)}</p>
     </>
   );
