@@ -9,7 +9,7 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await fetch("http://localhost:3333/episodes");
   const data = await response.json();
 
@@ -17,6 +17,5 @@ export async function getStaticProps() {
     props: {
       episodes: data,
     },
-    revalidate: 60 * 60 * 8,
   };
 }
