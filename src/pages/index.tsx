@@ -1,3 +1,5 @@
+import episodes from "./api/episodes";
+
 export default function Home(props) {
   return (
     <>
@@ -9,7 +11,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:3333/episodes");
+  const response = await fetch("http://localhost:3000/api/episodes");
   const data = await response.json();
 
   return {
